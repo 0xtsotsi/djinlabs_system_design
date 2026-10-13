@@ -1,0 +1,65 @@
+{
+  "ronde": 17,
+  "ronde_datum": "2026-09-21",
+  "ronde_claims": [
+    "Q17.1=A",
+    "Q17.2=B",
+    "Q17.3=A",
+    "Q17.4=A"
+  ],
+  "timestamp": "2026-09-22T11:11:26.095397Z",
+  "tool": "rondasync.py",
+  "mode": "dry-run",
+  "results": [
+    {
+      "file": "_shared/AGENTS.md",
+      "status": "dry-run",
+      "payload_size": 1601
+    },
+    {
+      "file": "_shared/agent-discipline-canon.md",
+      "status": "dry-run",
+      "payload_size": 1614
+    },
+    {
+      "file": "_shared/hard-rules.md",
+      "status": "dry-run",
+      "payload_size": 1604
+    },
+    {
+      "file": "_shared/icm-canon.md",
+      "status": "dry-run",
+      "payload_size": 1584
+    },
+    {
+      "file": "_shared/jev-policy-canon.md",
+      "status": "dry-run",
+      "payload_size": 1662
+    },
+    {
+      "file": "_shared/naming-conventions.md",
+      "status": "dry-run",
+      "payload_size": 1604
+    },
+    {
+      "file": "_shared/retention-policy-canon.md",
+      "status": "dry-run",
+      "payload_size": 1609
+    },
+    {
+      "file": "_shared/state-formats-canon.md",
+      "status": "dry-run",
+      "payload_size": 1605
+    },
+    {
+      "file": "_shared/sync-discipline-canon.md",
+      "status": "dry-run",
+      "payload_size": 1603
+    },
+    {
+      "file": "CONTEXT.md",
+      "status": "dry-run",
+      "payload_size": 1581
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+=== T-03 R2 (R19-heropening): Welke routes kent COS bij eerste launch? ===
+
+Datum: 2026-09-28
+Tijd: na Ronde 19 commit (c1ebd5b) + multi-runtime-cos-design.md archivering
+Context: runtime-vrije herformulering per motie 4 (DjinLabs zonder runtimes)
+
+T-03 VRAAG (R2 / R19, runtime-vrij, geen multiple choice):
+
+Welke input-stromen komen bij COS binnen en welke output-agenten routeert COS aan bij eerste launch?
+
+Denk aan (RUNTIME-VRIJ — geen Vercel Eve, geen Adam, geen DjinLabs HQ, geen Hermes als runtime):
+
+- Input-stromen: waar komen berichten of verzoeken vandaan, uitgedrukt als
+  FOLDER-VERWIJZINGEN of BESTANDSPADEN?
+  - Notion sync-pagina (communiemiddel tijdens ontwerp, wordt geen onderdeel
+    van het uiteindelijke systeem per C5)
+  - Files in djinlabs/, webrnds/, _shared/, research/
+  - Andere agents via hun folder (Hermes, Instinct, Jev) — als folder-auteur
+    niet als runtime
+  - Directe founder-input (Telegram, WhatsApp, of chat-kanaal)
+  - Tijd-getriggerde events via cal.md of vergelijkbare file
+  - Git events (hooks op folder-changes)
+
+- Output-agenten: waarheen routeert COS, uitgedrukt als AGENT-FOLDERS?
+  - Andere agents in hun eigen folders (Hermes-folder, GG-folder)
+  - Folder-auteurs (jij als auteur van een folder)
+  - Onderzoek-files in research/ (kanoniek-neutraal staging)
+  - Tickets in cos/tickets/
+  - Audit-spoor in audit-spoor/
+  - Jev voor verdict-aanvragen (extern, geen runtime, alleen verdict-call)
+  - Notion sync-pagina (alleen tijdens ontwerp, niet in eind-systeem)
+
+- Routes zelf: wat triggert welke route?
+  - Bij intent X → folder Y
+  - Bij urgency Z → fast-path (welke folder?)
+  - Bij side-effect W → approval gate (Jev-call of founder-confirm?)
+  - Bij canonieke wijziging V → Ronde-traject (decisions.md-edit + commit)
+
+----------------------------------------------------------------
+CONTEXT (ankers, runtime-vrij geverifieerd)
+
+A) T-01 definitie canon (gesloten 2026-09-21):
+   "COS is je Chief of Staff — hij leest je inbox en stuurt elk
+   bericht naar de juiste agent."
+
+B) T-02 resolutie (gesloten 2026-09-23, herzien 2026-09-28 Optie 5):
+   COS = folder-orthogonaal aan agents; "baas" = folder-auteur;
+   Jev = externe gate-verdict-autoriteit. Geen runtime-baas.
+
+C) Ronde 19 motie 1+4 (gecommit 2026-09-28, commit c1ebd5b):
+   - Geen runtimes in DjinLabs. multi-runtime-cos-design.md gearchiveerd.
+   - T-03 t/m T-10 herijken: routes = folder-verwijzingen.
+
+D) Agent = folder (canoniek, _shared/icm-canon.md):
+   Een agent is een map met platte bestanden. Walk-test = alles
+   begrijpen door de map te lezen.
+
+E) Hermes als folder, niet als runtime:
+   Hermes is een harnas (zoals Claude Code), niet een runtime.
+   Hermes leest COS' folder en gedraagt zich ernaar.
+
+F) Jev extern, geen runtime:
+   Jev is beleids-oracle (Ronde 17 V1.5). COS doet een verdict-call
+   naar Jev (extern), Jev antwoordt met APPROVED / CHANGES_REQUESTED.
+   Geen runtime-implementatie van Jev in DjinLabs.
+
+G) Webrnds profiel + klantreis (research/webrnds-profile.md):
+   Webrnds = venture onder DjinLabs umbrella.
+   Klantreis: prospect → intake → contract → levering → support.
+
+H) 187N-audit (research/187n-codex-hermes-audit-2026-09-28.md):
+   187N doet sub-agent orchestratie via folder-aanwijzingen, niet via
+   runtime-coordinator. Geen COS-runtime nodig.
+
+----------------------------------------------------------------
+T-03 R2 SUB-VRAGEN (4 AFTAS T-stijl vragen)
+
+V1. INPUT-STROMEN (≥3):
+   Welke ≥3 input-stromen moeten bij COS binnen kunnen komen bij
+   eerste launch? Bij elk: korte beschrijving + voorbeeld van een
+   typisch bericht of event. RUNTIME-VRIJ: beschrijf als folder-pad,
+   file-naam, of communicatie-kanaal — niet als runtime-API.
+
+V2. OUTPUT-AGENTEN (≥3):
+   Welke ≥3 output-agenten moet COS bij eerste launch kunnen
+   aansturen? Bij elk: korte beschrijving + voorbeeld van een
+   typische dispatch (folder-write, file-aanmaak, audit-spoor-entry).
+   RUNTIME-VRIJ: agent = folder-auteur van een bestaande folder.
+
+V3. ROUTE-TRIGGERS:
+   Welke ≥3 triggers bepalen welke route COS kiest? Bij elk:
+   - Welk signaal triggert (intent, urgency, side-effect, canoniek)
+   - Welke route wordt gekozen (welke folder? welke file?)
+   - Of approval-gate vereist is (Jev-call of founder-confirm?)
+
+V4. EXPLICIET UITGESLOTEN (nuancerend):
+   Welke input-stromen of output-agenten zijn EXPLICIET uitgesloten
+   bij eerste launch? (Bijv. e-mail lezen? Klant-betalingen?
+   Vercel Eve-runtime? Hermes-peer-DM? Andere?)
+
+----------------------------------------------------------------
+VERVOLG-VRAAG (na R1):
+
+Voor elke gekozen input/output/route: hoe wordt COS geïnformeerd
+over success of failure van de dispatch? RUNTIME-VRIJ:
+- Hermes schrijft resultaat terug naar COS-folder (file-write)?
+- Directe rapport aan founder via sync-pagina of chat?
+- Audit-spoor in cos/audit-spoor/?
+- Status-update in cos/tickets/<ticket>-resolution?
+
+----------------------------------------------------------------
+ESCAPE-ROUTE-VRAAG (verplicht):
+
+Wat doe je als een gekozen input-stroom uitvalt?
+Bijv. Sync-pagina niet bereikbaar → wat gebeurt er met inkomende berichten?
+Bijv. Hermes-folder niet leesbaar → wat gebeurt er met dispatches?
+Bijv. Founder niet bereikbaar voor approval → wat gebeurt er met side-effects?
+
+Geef per gekozen input/output één concrete escape-route (1-2 zinnen).
+
+----------------------------------------------------------------
+INSTRUCTIE
+
+Antwoord in chat-formaat:
+"V1: [lijst met voorbeelden]
+V2: [lijst met voorbeelden]
+V3: [triggers + routes + approval]
+V4: [uitgesloten stromen/agenten]
+Vervolg: [rapportage-mechanisme]
+Escape: [per input/output één zin]"
+
+Bij voldoende info synthetiseer ik naar T-03 resolutie en sluit het
+ticket. Daarna gaan we naar T-04 of T-09.
+
+----------------------------------------------------------------
+GRILL-ME NOTES (kanoniek-discipline, runtime-vrij)
+
+Frontier-discipline: één ticket per sessie. T-03 is een grilling-ticket,
+verwacht 2-4 rondes. Out-of-scope vragen worden genoteerd voor latere
+tickets (T-04 validatie, T-05 state-model, T-07 Jev-failure, T-08
+parallelle sessies, T-09 eerste use-case, T-10 niet-doen).
+
+Sync-discipline: T-03 ticket-file wordt geüpdatet bij elke Ronde.
+Wayfinder-map T-03 status wordt bijgewerkt. Notion sync-pagina krijgt
+korte vermelding (sync-discipline: 1-2 zinnen).
+
+Ankers van deze heropening: Ronde 19 commit (c1ebd5b), multi-runtime
+archivering, agent = folder-canon, Hermes als folder-harnas, Jev extern,
+187N-audit (sub-agent zonder orchestrator-runtime).
+
+Bij onduidelijkheid: schaal op naar volgende Ronde met sub-vraag.
+Bij voldoende: synthese + sluiting.

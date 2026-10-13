@@ -1,0 +1,135 @@
+{
+  "ronde": 17,
+  "ronde_datum": "2026-09-21",
+  "ronde_claims": [
+    "Q17.1=A",
+    "Q17.2=B",
+    "Q17.3=A",
+    "Q17.4=A"
+  ],
+  "timestamp": "2026-09-21T22:22:06.554798Z",
+  "tool": "rondasync.py",
+  "mode": "shadow",
+  "results": [
+    {
+      "file": "_shared/AGENTS.md",
+      "drift_status": "synced",
+      "drift_confidence": 0.26,
+      "action_band": "default-noop",
+      "needs_update": 0.53,
+      "drift_severity": 0.42,
+      "severity_band": "review-needed",
+      "duration_ms": 794,
+      "cost_usd": "$0.000030",
+      "input_tokens": 710
+    },
+    {
+      "file": "_shared/agent-discipline-canon.md",
+      "drift_status": "partial-drift",
+      "drift_confidence": 0.34,
+      "action_band": "default-noop",
+      "needs_update": 0.52,
+      "drift_severity": 0.39,
+      "severity_band": "review-needed",
+      "duration_ms": 832,
+      "cost_usd": "$0.000030",
+      "input_tokens": 708
+    },
+    {
+      "file": "_shared/hard-rules.md",
+      "drift_status": "synced",
+      "drift_confidence": 0.44,
+      "action_band": "review-needed",
+      "needs_update": 0.56,
+      "drift_severity": 0.6,
+      "severity_band": "default-noop",
+      "duration_ms": 908,
+      "cost_usd": "$0.000030",
+      "input_tokens": 704
+    },
+    {
+      "file": "_shared/icm-canon.md",
+      "drift_status": "synced",
+      "drift_confidence": 0.51,
+      "action_band": "review-needed",
+      "needs_update": 0.54,
+      "drift_severity": 0.49,
+      "severity_band": "default-noop",
+      "duration_ms": 786,
+      "cost_usd": "$0.000029",
+      "input_tokens": 698
+    },
+    {
+      "file": "_shared/jev-policy-canon.md",
+      "drift_status": "synced",
+      "drift_confidence": 0.44,
+      "action_band": "review-needed",
+      "needs_update": 0.54,
+      "drift_severity": 0.56,
+      "severity_band": "default-noop",
+      "duration_ms": 1154,
+      "cost_usd": "$0.000031",
+      "input_tokens": 737
+    },
+    {
+      "file": "_shared/naming-conventions.md",
+      "drift_status": "partial-drift",
+      "drift_confidence": 0.42,
+      "action_band": "review-needed",
+      "needs_update": 0.38,
+      "drift_severity": 0.34,
+      "severity_band": "review-needed",
+      "duration_ms": 1027,
+      "cost_usd": "$0.000030",
+      "input_tokens": 720
+    },
+    {
+      "file": "_shared/retention-policy-canon.md",
+      "drift_status": "partial-drift",
+      "drift_confidence": 0.45,
+      "action_band": "review-needed",
+      "needs_update": 0.42,
+      "drift_severity": 0.39,
+      "severity_band": "review-needed",
+      "duration_ms": 804,
+      "cost_usd": "$0.000030",
+      "input_tokens": 715
+    },
+    {
+      "file": "_shared/state-formats-canon.md",
+      "drift_status": "synced",
+      "drift_confidence": 0.64,
+      "action_band": "review-needed",
+      "needs_update": 0.52,
+      "drift_severity": 0.64,
+      "severity_band": "default-noop",
+      "duration_ms": 846,
+      "cost_usd": "$0.000030",
+      "input_tokens": 714
+    },
+    {
+      "file": "_shared/sync-discipline-canon.md",
+      "drift_status": "synced",
+      "drift_confidence": 0.85,
+      "action_band": "auto-classify",
+      "needs_update": 0.68,
+      "drift_severity": 0.76,
+      "severity_band": "default-noop",
+      "duration_ms": 936,
+      "cost_usd": "$0.000030",
+      "input_tokens": 715
+    },
+    {
+      "file": "CONTEXT.md",
+      "drift_status": "partial-drift",
+      "drift_confidence": 0.22,
+      "action_band": "default-noop",
+      "needs_update": 0.46,
+      "drift_severity": 0.34,
+      "severity_band": "review-needed",
+      "duration_ms": 795,
+      "cost_usd": "$0.000030",
+      "input_tokens": 711
+    }
+  ]
+}

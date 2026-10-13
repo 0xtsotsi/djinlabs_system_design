@@ -1,0 +1,122 @@
+=== T-02 R2: Wie is COS' "baas"? ===
+
+Datum: 2026-09-23 (geüpdatet van 22 sep)
+Tijd: na R1 antwoord + "agent = folder" notie + skills-audit + Notion sync
+
+R1-ANTWOORDEN (jouw input, 2026-09-21):
+- V1: hybride (founder + regels + COS zelf)
+- V2: founder (jij) wint bij conflict
+- V3: COS escaleert wanneer regels niet nageleefd worden
+- V4: (niet beantwoord)
+- V5: (niet beantwoord)
+
+NIEUWE ANKERS (sinds R1, allen vandaag toegevoegd):
+
+A) Agent = folder (canoniek-neutraal, research-note 2026-09-22 in
+   djinlabs/_internal/experimenten/cos/research/).
+   - Een agent wordt gedefinieerd door de instructies in zijn folder.
+   - COS is opтoгoнaл aan andere agenten = folder-disciplinair.
+   - Geen "baas" in hiërarchische zin; wel "auteur" van de folder.
+
+B) Hun werk (djinlabs/system/design/notes/cos-architecture-2026-09-22.md
+   §1 zin 2, Q4):
+   - "Sub-agent does not know the orchestrator exists."
+   - "The COS lives above the existing agent layers."
+   - → COS heeft geen directe "baas"-agent; de baas is de AUTEUR van
+     de agent-folders, niet een runtime-entiteit.
+
+C) Ronde 14 boundary-discipline:
+   - Djin schrijft niet in Webrnds-folder, etc.
+   - Cross-boundary handovers via /_shared/handovers/.
+   - → "Baas" kan ook betekenen: wie onderhoudt de COS-folder?
+
+D) Jev-policy-canon Ronde 17 V1.5 (_shared/jev-policy-canon.md):
+   - Jev = policy-oracle.
+   - "CompleteTask" vereist Jev-verdict (hun C3).
+   - → Jev is een pseudo-"baas" in zoverre het de verdict-autoriteit heeft.
+
+E) Skills-installatie-discipline (vandaag, 2026-09-23):
+   - Bouncer audit-flow opgezet.
+   - 31 nieuwe skills geïnstalleerd, allemaal via bron-lezen + audit + pin.
+   - → COS moet deze discipline volgen bij toekomstige skill-installaties.
+
+F) Notion sync-pagina (vandaag, 2026-09-23):
+   - Hermes + Instinct delen nu een Notion-pagina.
+   - Sync-discipline: Hermes 1-2 zinnen per actie; Instinct schrijft zelf.
+   - → Dit is een EXTERNE observator. Niet canoniek-baas, maar wel
+     visibility op COS-werk.
+
+----------------------------------------------------------------
+R2 VRAAG (single, geen multiple choice):
+
+Met de notie "agent = folder" + skills-discipline + Notion-sync als ankers:
+wie is COS' baas?
+
+Vier opties, kies er één (of geef een vijfde):
+
+1. **Founder (jij) als folder-auteur.**
+   Jij onderhoudt de COS-folder. Jij schrijft CONTEXT.md, AGENTS.md,
+   wayfinder-map, tickets. COS heeft geen runtime-baas; zijn
+   "baas" is zijn folder-auteur.
+
+2. **Jev + jij (twee lagen).**
+   Jev = runtime-autoriteit (verdict op elke dispatch).
+   Jij = canonieke auteur (folder + Ronde-trajecten).
+   Twee verschillende soorten autoriteit, niet hiërarchisch.
+
+3. **COS zelf (zelf-referentie met Jev-check).**
+   COS onderhoudt zijn eigen folder. Jev is de check; jij bent de
+   review-auditor. COS heeft geen externe runtime-baas, alleen interne
+   constraints (Jev-blokkades + audit-spoor).
+
+4. **COS als folder, jij + Jev + Instinct als visibility.**
+   COS = een folder opтoгoнaл aan andere agents.
+   Jij = canonieke auteur (Ronde-trajecten, Ronde 14-18).
+   Jev = runtime-verdict-autoriteit (Ronde 17 V1.5).
+   Instinct = externe observator via Notion sync-pagina (canoniek-neutraal).
+   Geen hiërarchie, drie verschillende visibility-lagen.
+
+5. (Anders: typ je eigen.)
+
+----------------------------------------------------------------
+VERVOLG-VRAAG (na keuze):
+
+Voor alle opties: hoe vaak review je de COS-folder?
+- Wekelijks (default)
+- Maandelijks
+- Alleen op trigger (incident, COS-failure, Ronde-sluiting)
+- Anders: typ je eigen
+
+Voor optie 4 specifiek: hoe voorkom je dat Instinct een canonieke
+baas wordt via Notion-updates?
+- Instinct schrijft alleen in "Instinct status" sectie (sync-discipline al
+  vastgelegd)
+- Hermes reviewed Instinct's updates wekelijks
+- Instinct heeft geen schrijftoegang tot canonieke files (Notion-PAT
+  scoped tot sync-pagina)
+- Anders: typ je eigen
+
+----------------------------------------------------------------
+ESCAPE-ROUTE-VRAAG (verplicht):
+
+Wat doe je als je gekozen mechanisme faalt?
+
+Eén concreet scenario per gekozen optie:
+- Optie 1: je bent 6 maanden niet beschikbaar.
+- Optie 2: Jev is unreachable / API-key verlopen.
+- Optie 3: COS heeft zichzelf in een loop gebracht (self-contradiction).
+- Optie 4: Notion sync-pagina wordt verwijderd / Instinct wordt offline
+  gehaald / Hermes-sessies verliezen PAT-toegang.
+
+Geef per gekozen optie een concrete escape-route (1-2 zinnen).
+
+----------------------------------------------------------------
+INSTRUCTIE
+
+Antwoord in chat-formaat:
+"Kies: [nummer of eigen]
+Vervolg: [antwoord]
+Escape: [antwoord]"
+
+Bij voldoende info synthetiseer ik naar T-02 resolutie en sluit het
+ticket. Daarna gaan we naar T-03.
